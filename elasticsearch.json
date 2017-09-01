@@ -109,7 +109,7 @@
           "tableColumn": "",
           "targets": [
             {
-              "expr": "max(elasticsearch_cluster_health_status{cluster=\"$cluster\"})",
+              "expr": "avg(elasticsearch_cluster_health_status{cluster=\"$cluster\",color=\"green\"})  + avg(elasticsearch_cluster_health_status{cluster=\"$cluster\",color=\"yellow\"}) * 10 + avg(elasticsearch_cluster_health_status{cluster=\"$cluster\",color=\"red\"}) * 100\n",
               "format": "time_series",
               "hide": false,
               "intervalFactor": 2,
@@ -128,17 +128,17 @@
             {
               "op": "=",
               "text": "GREEN",
-              "value": "0"
-            },
-            {
-              "op": "=",
-              "text": "YELLOW",
               "value": "1"
             },
             {
               "op": "=",
+              "text": "YELLOW",
+              "value": "10"
+            },
+            {
+              "op": "=",
               "text": "RED",
-              "value": "2"
+              "value": "100"
             }
           ],
           "valueName": "current"
