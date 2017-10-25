@@ -19,5 +19,5 @@ example config for elasticsearch_exporter:
     - targets: [ 'client1' ]
       # Labels assigned to all metrics scraped from the targets.
       labels:
-        node_type: client"
+        node_type: client
 ```
