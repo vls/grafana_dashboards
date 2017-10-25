@@ -854,11 +854,11 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "elasticsearch_process_cpu_percent{cluster=\"$cluster\",node=~\"$node\", node_type=~\"$node_type\"}",
+              "expr": "elasticsearch_process_cpu_percent{cluster=\"$cluster\", node_type=~\"$node_type\"}",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
-              "legendFormat": "{{node}}",
+              "legendFormat": "{{host}}",
               "metric": "",
               "refId": "A",
               "step": 10
@@ -942,11 +942,11 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "1-(elasticsearch_filesystem_data_available_bytes{cluster=\"$cluster\",node=~\"$node\", node_type=~\"$node_type\"}/elasticsearch_filesystem_data_size_bytes{cluster=\"$cluster\",node=~\"$node\", node_type=~\"$node_type\"})",
+              "expr": "1-(elasticsearch_filesystem_data_available_bytes{cluster=\"$cluster\", node_type=~\"$node_type\"}/elasticsearch_filesystem_data_size_bytes{cluster=\"$cluster\", node_type=~\"$node_type\"})",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
-              "legendFormat": "{{node}} - {{path}}",
+              "legendFormat": "{{host}} - {{path}}",
               "metric": "",
               "refId": "A",
               "step": 10
@@ -1057,11 +1057,11 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "elasticsearch_indices_docs{cluster=\"$cluster\",node=~\"$node\", node_type=~\"$node_type\"}",
+              "expr": "elasticsearch_indices_docs{cluster=\"$cluster\", node_type=~\"$node_type\"}",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
-              "legendFormat": "{{node}}",
+              "legendFormat": "{{host}}",
               "metric": "",
               "refId": "A",
               "step": 20
@@ -1145,11 +1145,11 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "rate(elasticsearch_indices_indexing_index_total{cluster=\"$cluster\",node=~\"$node\", node_type=~\"$node_type\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_indexing_index_total{cluster=\"$cluster\", node_type=~\"$node_type\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
-              "legendFormat": "{{node}}",
+              "legendFormat": "{{host}}",
               "metric": "",
               "refId": "A",
               "step": 20
@@ -1233,11 +1233,11 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "rate(elasticsearch_indices_indexing_delete_total{cluster=\"$cluster\",node=~\"$node\", node_type=~\"$node_type\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_indexing_delete_total{cluster=\"$cluster\", node_type=~\"$node_type\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
-              "legendFormat": "{{node}}",
+              "legendFormat": "{{host}}",
               "metric": "",
               "refId": "A",
               "step": 20
@@ -1321,11 +1321,11 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "rate(elasticsearch_indices_merges_total{cluster=\"$cluster\",node=~\"$node\", node_type=~\"$node_type\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_merges_total{cluster=\"$cluster\", node_type=~\"$node_type\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
-              "legendFormat": "{{node}}",
+              "legendFormat": "{{host}}",
               "metric": "",
               "refId": "A",
               "step": 20
@@ -1421,11 +1421,11 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "rate(elasticsearch_indices_search_query_time_seconds{cluster=\"$cluster\",node=~\"$node\", node_type=~\"$node_type\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_search_query_time_seconds{cluster=\"$cluster\", node_type=~\"$node_type\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
-              "legendFormat": "{{node}}",
+              "legendFormat": "{{host}}",
               "metric": "",
               "refId": "A",
               "step": 10
@@ -1510,11 +1510,11 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "rate(elasticsearch_indices_indexing_index_time_seconds_total{cluster=\"$cluster\",node=~\"$node\", node_type=~\"$node_type\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_indexing_index_time_seconds_total{cluster=\"$cluster\", node_type=~\"$node_type\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
-              "legendFormat": "{{node}}",
+              "legendFormat": "{{host}}",
               "metric": "",
               "refId": "A",
               "step": 10
@@ -1598,11 +1598,11 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "rate(elasticsearch_indices_merges_total_time_seconds_total{cluster=\"$cluster\",node=~\"$node\", node_type=~\"$node_type\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_merges_total_time_seconds_total{cluster=\"$cluster\", node_type=~\"$node_type\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
-              "legendFormat": "{{node}}",
+              "legendFormat": "{{host}}",
               "metric": "",
               "refId": "A",
               "step": 10
@@ -1698,11 +1698,11 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "elasticsearch_indices_fielddata_memory_size_bytes{cluster=\"$cluster\",node=~\"$node\", node_type=~\"$node_type\"}",
+              "expr": "elasticsearch_indices_fielddata_memory_size_bytes{cluster=\"$cluster\", node_type=~\"$node_type\"}",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
-              "legendFormat": "{{node}}",
+              "legendFormat": "{{host}}",
               "metric": "",
               "refId": "A",
               "step": 10
@@ -1786,11 +1786,11 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "rate(elasticsearch_indices_fielddata_evictions{cluster=\"$cluster\",node=~\"$node\", node_type=~\"$node_type\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_fielddata_evictions{cluster=\"$cluster\", node_type=~\"$node_type\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
-              "legendFormat": "{{node}}",
+              "legendFormat": "{{host}}",
               "metric": "",
               "refId": "A",
               "step": 10
@@ -1874,11 +1874,11 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "elasticsearch_indices_query_cache_memory_size_bytes{cluster=\"$cluster\",node=~\"$node\", node_type=~\"$node_type\"}",
+              "expr": "elasticsearch_indices_query_cache_memory_size_bytes{cluster=\"$cluster\", node_type=~\"$node_type\"}",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
-              "legendFormat": "{{node}}",
+              "legendFormat": "{{host}}",
               "metric": "",
               "refId": "A",
               "step": 10
@@ -1962,11 +1962,11 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "rate(elasticsearch_indices_query_cache_evictions{cluster=\"$cluster\",node=~\"$node\", node_type=~\"$node_type\"}[$interval])",
+              "expr": "rate(elasticsearch_indices_query_cache_evictions{cluster=\"$cluster\", node_type=~\"$node_type\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
-              "legendFormat": "{{node}}",
+              "legendFormat": "{{host}}",
               "metric": "",
               "refId": "A",
               "step": 10
@@ -2062,11 +2062,11 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "elasticsearch_jvm_memory_used_bytes{area=\"heap\", cluster=\"$cluster\",node=~\"$node\", node_type=~\"$node_type\"}",
+              "expr": "elasticsearch_jvm_memory_used_bytes{area=\"heap\", cluster=\"$cluster\", node_type=~\"$node_type\"}",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
-              "legendFormat": "{{node}} - heap used",
+              "legendFormat": "{{host}} - heap used",
               "metric": "",
               "refId": "A",
               "step": 10
@@ -2150,11 +2150,11 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "rate(elasticsearch_jvm_gc_collection_seconds_count{cluster=\"$cluster\",node=~\"$node\", node_type=~\"$node_type\"}[$interval])",
+              "expr": "rate(elasticsearch_jvm_gc_collection_seconds_count{cluster=\"$cluster\", node_type=~\"$node_type\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
-              "legendFormat": "{{node}} - {{gc}}",
+              "legendFormat": "{{host}} - {{gc}}",
               "metric": "",
               "refId": "A",
               "step": 10
@@ -2240,11 +2240,11 @@
           "steppedLine": false,
           "targets": [
             {
-              "expr": "rate(elasticsearch_jvm_gc_collection_seconds_count{cluster=\"$cluster\",node=~\"$node\", node_type=~\"$node_type\"}[$interval])",
+              "expr": "rate(elasticsearch_jvm_gc_collection_seconds_count{cluster=\"$cluster\", node_type=~\"$node_type\"}[$interval])",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
-              "legendFormat": "{{node}} - {{gc}}",
+              "legendFormat": "{{host}} - {{gc}}",
               "metric": "",
               "refId": "A",
               "step": 10
